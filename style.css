@@ -1,0 +1,16 @@
+body {
+  background-color: aqua;
+  position: absolute;
+}
+
+div {
+  border: thick solid black;
+}
+.main {
+  background-color: antiquewhite;
+  color: rgb(255, 0, 0);
+  border: thick solid black;
+
+  padding: 50px;
+  display: flex;
+}
