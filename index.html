@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
+    <div id="box">
       <span class="main">Hello World</span>
     </div>
-
-    <script src="index.js"></script>
   </body>
+  <script>
+    document.getElementById("box").style.position = "absolute";
+    document.getElementById("box").style.left = `${window.innerWidth / 3}px`;
+    document.getElementById("box").style.top = `${window.innerHeight / 3}px`;
+    document.write(window.innerWidth);
+    document.write(window.innerHeight);
+  </script>
 </html>
