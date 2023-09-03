@@ -5,20 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meine erste Homepage</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <style>
+      body {
+        background-color: aqua;
+      }
+
+      div {
+        border: solid black;
+      }
+      .main {
+        background-color: antiquewhite;
+        color: rgb(255, 0, 0);
+        border: thick solid black;
+
+        padding: 20px;
+        display: flex;
+      }
+    </style>
     <div id="box">
       <span class="main">Hello World</span>
     </div>
   </body>
   <script>
-    let boxHeight = document.getElementById("box").clientHeight;
-    let boxWidth = document.getElementById("box").clientWidth;
-    let dt = window.innerHeight - boxHeight;
-    let dl = window.innerWidth - boxWidth;
+    // let boxHeight = document.getElementById("box").clientHeight;
+    // let boxWidth = document.getElementById("box").clientWidth;
+    // let dt = window.innerHeight - boxHeight;
+    // let dl = window.innerWidth - boxWidth;
     document.getElementById("box").style.position = "absolute";
-    document.getElementById("box").style.top = `${dt / 2}px`;
-    document.getElementById("box").style.left = `${dl / 2}px`;
+    document.getElementById("box").style.top = "50%";
+    document.getElementById("box").style.left = "50%";
+    // document.write(window.document.body.clientHeight);
+    // document.write("\n");
+    // document.write(window.document.body.clientWidth);
   </script>
 </html>
