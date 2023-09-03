@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meine erste Homepage</title>
     <style>
@@ -32,7 +32,7 @@
     let boxHeight = document.getElementById("box").clientHeight;
     let boxWidth = document.getElementById("box").clientWidth;
     let dt = window.innerHeight - boxHeight;
-    let dl = window.innerWidth - boxWidth;
+    let dl = boxWidth; // div element geht über die gesamte Fenterbreite
     document.getElementById("box").style.position = "absolute";
     document.getElementById("box").style.top = `${dt / 2}px`;
     document.getElementById("box").style.left = `${dl / 2}px`;
