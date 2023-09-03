@@ -13,10 +13,12 @@
     </div>
   </body>
   <script>
+    let boxHeight = document.getElementById("box").clientHeight;
+    let boxWidth = document.getElementById("box").clientWidth;
+    let dt = window.innerHeight - boxHeight;
+    let dl = window.innerWidth - boxWidth;
     document.getElementById("box").style.position = "absolute";
-    document.getElementById("box").style.left = `${window.innerWidth / 3}px`;
-    document.getElementById("box").style.top = `${window.innerHeight / 3}px`;
-    document.write(window.innerWidth);
-    document.write(window.innerHeight);
+    document.getElementById("box").style.top = `${dt / 2}px`;
+    document.getElementById("box").style.left = `${dl / 2}px`;
   </script>
 </html>
