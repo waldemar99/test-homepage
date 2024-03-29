@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meine erste Homepage</title>
+  </head>
+  <style>
+    body {
+      background-color: aqua;
+      padding: 20px;
+    }
+    body > div {
+      border: solid 5px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    span {
+      border: solid 5px;
+    }
+  </style>
+  <body>
+    <span id="hallo" draggable="true">Hallo</span>
+    <span id="world" draggable="true">World</span>
+    <div id="box" draggable="true">BOX</div>
+  </body>
+  <script>
+    const hallo = document.getElementById("hallo");
+    const world = document.getElementById("world");
+    const box = document.getElementById("box");
+
+    hallo.addEventListener("dragstart", (e) => {
+      e.dataTransfer.setData("text/plain", e.target.id);
+    });
+
+    window.addEventListener("keypress", () => {
+      world.textContent = "neu  ";
+    });
+
+    world.addEventListener("dragstart", (e) => {
+      e.dataTransfer.setData("text/plain", e.target.id);
+    });
+
+    box.addEventListener("dragover", (e) => {
+      //   e.preventDefault();
+    });
+
+    box.addEventListener("drop", (e) => {
+      e.preventDefault();
+      const data = e.dataTransfer.getData("text/plain");
+      const element = document.getElementById(data);
+      box.appendChild(element);
+    });
+  </script>
+</html>
